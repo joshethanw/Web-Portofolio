@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio — Writer</title>
+<style>
+  :root{
+    --paper:#EFEAE2;
+    --ink:#20201C;
+    --rust:#8C4A2F;
+    --moss:#4B5A45;
+    --line:#20201C33;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Georgia', 'Iowan Old Style', serif;
+    line-height:1.6;
+  }
+  .type-label{
+    font-family:'Courier New', monospace;
+    text-transform:uppercase;
+    letter-spacing:.14em;
+    font-size:.72rem;
+  }
+
+  header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:2rem 6vw 1.2rem;
+    border-bottom:1px solid var(--line);
+  }
+  header .mark{
+    font-family:'Courier New', monospace;
+    font-weight:700;
+    letter-spacing:.05em;
+    font-size:1rem;
+  }
+  nav a{
+    color:var(--ink);
+    text-decoration:none;
+    margin-left:2rem;
+  }
+  .type-label{ }
+  nav a:hover{ color:var(--rust); }
+
+  .hero{
+    padding:7vw 6vw 5vw;
+    border-bottom:1px solid var(--line);
+    position:relative;
+  }
+  .hero .kicker{
+    color:var(--rust);
+    margin-bottom:1.2rem;
+  }
+  .hero h1{
+    font-size:clamp(2.6rem, 7vw, 5.6rem);
+    line-height:0.98;
+    margin:0 0 1.6rem;
+    max-width:16ch;
+    font-weight:400;
+    letter-spacing:-.01em;
+  }
+  .hero h1 em{
+    font-style:italic;
+    color:var(--rust);
+  }
+  .hero p.sub{
+    max-width:46ch;
+    font-size:1.15rem;
+    color:var(--ink)cc;
+    margin:0 0 2.4rem;
+  }
+  .hero .cta{
+    display:inline-block;
+    border:1px solid var(--ink);
+    padding:.8rem 1.6rem;
+    text-decoration:none;
+    color:var(--ink);
+    font-family:'Courier New', monospace;
+    font-size:.85rem;
+    letter-spacing:.05em;
+    transition:.2s;
+  }
+  .hero .cta:hover{
+    background:var(--ink);
+    color:var(--paper);
+  }
+
+  .masthead-rule{
+    display:flex;
+    justify-content:space-between;
+    padding:.9rem 6vw;
+    border-bottom:1px solid var(--line);
+    font-family:'Courier New', monospace;
+    font-size:.72rem;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:var(--ink)99;
+  }
+
+  section{
+    padding:5vw 6vw;
+    border-bottom:1px solid var(--line);
+  }
+  .section-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    margin-bottom:2.2rem;
+  }
+  .section-head h2{
+    font-size:1.9rem;
+    font-weight:400;
+    margin:0;
+  }
+
+  .clips{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(260px,1fr));
+    gap:0;
+    border-top:1px solid var(--line);
+  }
+  .clip{
+    padding:2rem 1.6rem 2rem 0;
+    border-bottom:1px solid var(--line);
+  }
+  .clips .clip:not(:last-child){
+    border-right:1px solid var(--line);
+    padding-right:1.6rem;
+  }
+  .clip .type-label{ color:var(--moss); display:block; margin-bottom:.8rem;}
+  .clip h3{
+    font-size:1.3rem;
+    font-weight:400;
+    margin:0 0 .6rem;
+  }
+  .clip p{
+    margin:0 0 1rem;
+    font-size:.98rem;
+    color:var(--ink)cc;
+  }
+  .clip a{
+    color:var(--rust);
+    text-decoration:none;
+    font-family:'Courier New', monospace;
+    font-size:.78rem;
+    letter-spacing:.05em;
+  }
+  .clip a:hover{ text-decoration:underline; }
+
+  .about{
+    display:grid;
+    grid-template-columns:1fr 1.4fr;
+    gap:3rem;
+  }
+  .about p{ font-size:1.05rem; max-width:56ch; }
+
+  footer{
+    padding:3rem 6vw;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:1rem;
+  }
+  footer a{
+    color:var(--ink);
+    margin-left:1.5rem;
+    text-decoration:none;
+  }
+  footer a:hover{ color:var(--rust); }
+
+  @media (max-width:640px){
+    .about{ grid-template-columns:1fr; }
+    .clips .clip{ border-right:none !important; padding-right:0; }
+    nav a{ margin-left:1rem; font-size:.68rem;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="mark">J. RIVERA</div>
+  <nav class="type-label">
+    <a href="#work">Work</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="kicker type-label">Nonfiction &amp; Narrative Writer</div>
+  <h1>Stories worth <em>slowing down</em> for.</h1>
+  <p class="sub">I write long-form journalism, essays, and profiles about work, place, and the people who don't usually get asked. Bylines in a handful of places you'd recognize.</p>
+  <a class="cta" href="#work">READ THE WORK →</a>
+</div>
+
+<div class="masthead-rule">
+  <span>Est. 2018</span>
+  <span>Based in Jakarta</span>
+  <span>Available for assignment</span>
+</div>
+
+<section id="work">
+  <div class="section-head">
+    <h2>Selected clips</h2>
+    <span class="type-label">04 pieces</span>
+  </div>
+  <div class="clips">
+    <div class="clip">
+      <span class="type-label">Feature — 4,200 words</span>
+      <h3>The Last Night Market on Jalan Sabang</h3>
+      <p>A dying block of street vendors, and what gets lost when a city redevelops its appetite.</p>
+      <a href="#">READ PIECE →</a>
+    </div>
+    <div class="clip">
+      <span class="type-label">Profile — 2,800 words</span>
+      <h3>The Woman Who Repairs Ships in Sunda Kelapa</h3>
+      <p>One of the harbor's last female caulkers, on tradition, labor, and being underestimated.</p>
+      <a href="#">READ PIECE →</a>
+    </div>
+    <div class="clip">
+      <span class="type-label">Essay — 1,600 words</span>
+      <h3>On Writing About Places You're Leaving</h3>
+      <p>A personal essay on documentation as a form of grief, and of holding on.</p>
+      <a href="#">READ PIECE →</a>
+    </div>
+    <div class="clip">
+      <span class="type-label">Investigation — 5,100 words</span>
+      <h3>Who Owns the Rain?</h3>
+      <p>A look into private weather-modification contracts and who actually benefits from them.</p>
+      <a href="#">READ PIECE →</a>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="section-head">
+    <h2>About</h2>
+  </div>
+  <div class="about">
+    <div class="type-label">Bio</div>
+    <p>I've spent the last several years writing about the quiet mechanics of everyday life — labor, migration, and the small negotiations people make with the places they live. My work has appeared in regional and international outlets, and I've reported from four countries. When I'm not on assignment, I'm usually reading something too long for the subway.</p>
+  </div>
+</section>
+
+<footer id="contact">
+  <span class="type-label">© 2026 J. Rivera</span>
+  <div>
+    <a class="type-label" href="mailto:hello@example.com">EMAIL</a>
+    <a class="type-label" href="#">TWITTER</a>
+    <a class="type-label" href="#">LINKEDIN</a>
+  </div>
+</footer>
+
+</body>
+</html>
