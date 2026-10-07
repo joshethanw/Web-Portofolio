@@ -1,263 +1,329 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfolio — Writer</title>
-<style>
-  :root{
-    --paper:#EFEAE2;
-    --ink:#20201C;
-    --rust:#8C4A2F;
-    --moss:#4B5A45;
-    --line:#20201C33;
-  }
-  *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  body{
-    margin:0;
-    background:var(--paper);
-    color:var(--ink);
-    font-family:'Georgia', 'Iowan Old Style', serif;
-    line-height:1.6;
-  }
-  .type-label{
-    font-family:'Courier New', monospace;
-    text-transform:uppercase;
-    letter-spacing:.14em;
-    font-size:.72rem;
-  }
-
-  header{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:2rem 6vw 1.2rem;
-    border-bottom:1px solid var(--line);
-  }
-  header .mark{
-    font-family:'Courier New', monospace;
-    font-weight:700;
-    letter-spacing:.05em;
-    font-size:1rem;
-  }
-  nav a{
-    color:var(--ink);
-    text-decoration:none;
-    margin-left:2rem;
-  }
-  .type-label{ }
-  nav a:hover{ color:var(--rust); }
-
-  .hero{
-    padding:7vw 6vw 5vw;
-    border-bottom:1px solid var(--line);
-    position:relative;
-  }
-  .hero .kicker{
-    color:var(--rust);
-    margin-bottom:1.2rem;
-  }
-  .hero h1{
-    font-size:clamp(2.6rem, 7vw, 5.6rem);
-    line-height:0.98;
-    margin:0 0 1.6rem;
-    max-width:16ch;
-    font-weight:400;
-    letter-spacing:-.01em;
-  }
-  .hero h1 em{
-    font-style:italic;
-    color:var(--rust);
-  }
-  .hero p.sub{
-    max-width:46ch;
-    font-size:1.15rem;
-    color:var(--ink)cc;
-    margin:0 0 2.4rem;
-  }
-  .hero .cta{
-    display:inline-block;
-    border:1px solid var(--ink);
-    padding:.8rem 1.6rem;
-    text-decoration:none;
-    color:var(--ink);
-    font-family:'Courier New', monospace;
-    font-size:.85rem;
-    letter-spacing:.05em;
-    transition:.2s;
-  }
-  .hero .cta:hover{
-    background:var(--ink);
-    color:var(--paper);
-  }
-
-  .masthead-rule{
-    display:flex;
-    justify-content:space-between;
-    padding:.9rem 6vw;
-    border-bottom:1px solid var(--line);
-    font-family:'Courier New', monospace;
-    font-size:.72rem;
-    letter-spacing:.1em;
-    text-transform:uppercase;
-    color:var(--ink)99;
-  }
-
-  section{
-    padding:5vw 6vw;
-    border-bottom:1px solid var(--line);
-  }
-  .section-head{
-    display:flex;
-    justify-content:space-between;
-    align-items:baseline;
-    margin-bottom:2.2rem;
-  }
-  .section-head h2{
-    font-size:1.9rem;
-    font-weight:400;
-    margin:0;
-  }
-
-  .clips{
-    display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(260px,1fr));
-    gap:0;
-    border-top:1px solid var(--line);
-  }
-  .clip{
-    padding:2rem 1.6rem 2rem 0;
-    border-bottom:1px solid var(--line);
-  }
-  .clips .clip:not(:last-child){
-    border-right:1px solid var(--line);
-    padding-right:1.6rem;
-  }
-  .clip .type-label{ color:var(--moss); display:block; margin-bottom:.8rem;}
-  .clip h3{
-    font-size:1.3rem;
-    font-weight:400;
-    margin:0 0 .6rem;
-  }
-  .clip p{
-    margin:0 0 1rem;
-    font-size:.98rem;
-    color:var(--ink)cc;
-  }
-  .clip a{
-    color:var(--rust);
-    text-decoration:none;
-    font-family:'Courier New', monospace;
-    font-size:.78rem;
-    letter-spacing:.05em;
-  }
-  .clip a:hover{ text-decoration:underline; }
-
-  .about{
-    display:grid;
-    grid-template-columns:1fr 1.4fr;
-    gap:3rem;
-  }
-  .about p{ font-size:1.05rem; max-width:56ch; }
-
-  footer{
-    padding:3rem 6vw;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    flex-wrap:wrap;
-    gap:1rem;
-  }
-  footer a{
-    color:var(--ink);
-    margin-left:1.5rem;
-    text-decoration:none;
-  }
-  footer a:hover{ color:var(--rust); }
-
-  @media (max-width:640px){
-    .about{ grid-template-columns:1fr; }
-    .clips .clip{ border-right:none !important; padding-right:0; }
-    nav a{ margin-left:1rem; font-size:.68rem;}
-  }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f4ef">
+  <meta name="description" content="Portofolio Josh Ethan Widjaja, mahasiswa UPH yang tertarik pada teknologi dan olahraga.">
+  <title>Josh Ethan Widjaja — Portofolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
+  <header class="site-header" id="home">
+    <nav class="nav container" aria-label="Navigasi utama">
+      <a class="wordmark" href="#home" aria-label="Kembali ke beranda">portofolio<span>.</span></a>
+      <ul class="nav-links">
+        <li><a href="#tentang">Tentang</a></li>
+        <li><a href="#hobi">Hobi</a></li>
+        <li><a href="#akademik">Akademik</a></li>
+        <li><a href="#prestasi">Prestasi</a></li>
+        <li><a href="#proyek">Proyek</a></li>
+        <li><a href="#proyek-tim">Proyek tim</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<header>
-  <div class="mark">J. RIVERA</div>
-  <nav class="type-label">
-    <a href="#work">Work</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
+  <main>
+    <section class="intro container" aria-labelledby="intro-title">
+      <div class="intro-copy">
+        <p class="eyebrow"><span class="status-dot"></span> Mahasiswa UPH · Interested in Technology &amp; Sports</p>
+        <h1 id="intro-title">Josh Ethan Widjaja</h1>
+        <p class="intro-text">Saat ini saya kuliah di UPH dan tertarik pada teknologi serta olahraga. Saya belajar back-end lewat mata kuliah Mobile App Development dan front-end lewat proyek di mata kuliah Perancangan &amp; Pemrograman Web. Portofolio ini juga memuat hal-hal yang saya tekuni di luar kuliah.</p>
+        <div class="intro-actions">
+          <a class="button button-dark" href="#proyek">Lihat proyek <span aria-hidden="true">↓</span></a>
+          <a class="text-link" href="#tentang">Sedikit tentang saya</a>
+        </div>
+      </div>
+      <div class="intro-note">
+        <img class="intro-photo" src="Images%20%26%20Videos/FotoJosh.jpg" alt="">
+      </div>
+    </section>
 
-<div class="hero">
-  <div class="kicker type-label">Nonfiction &amp; Narrative Writer</div>
-  <h1>Stories worth <em>slowing down</em> for.</h1>
-  <p class="sub">I write long-form journalism, essays, and profiles about work, place, and the people who don't usually get asked. Bylines in a handful of places you'd recognize.</p>
-  <a class="cta" href="#work">READ THE WORK →</a>
-</div>
+    <section class="about section-border" id="tentang">
+      <div class="container about-grid">
+        <p class="eyebrow section-label">01 — Tentang</p>
+        <div class="about-copy">
+          <h2>Belajar di kampus, berkembang di luar kelas.</h2>
+          <p>Saya adalah mahasiswa UPH yang tertarik pada teknologi dan olahraga. Di perkuliahan, saya sedang mempelajari pengembangan aplikasi Android serta dasar-dasar pembuatan web.</p>
+          <p>Di luar kelas, saya juga ingin bercerita tentang hobi, pengalaman, dan pencapaian yang membentuk diri saya. Bagian-bagian tersebut bisa saya lengkapi seiring waktu.</p>
+        </div>
+      </div>
+    </section>
 
-<div class="masthead-rule">
-  <span>Est. 2018</span>
-  <span>Based in Jakarta</span>
-  <span>Available for assignment</span>
-</div>
+    <section class="personal-section section-border" id="hobi">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">02 — Di luar kelas</p>
+            <h2>Hal yang saya suka</h2>
+          </div>
+          <p class="heading-note">Hobi dan kegiatan yang ingin saya ceritakan.</p>
+        </div>
+        <div class="personal-grid">
+          <article class="personal-card">
+            <img class="photo-placeholder hobby-media" src="Images%20%26%20Videos/Hobi1.jpeg" alt="Josh bermain bulutangkis">
+            <p class="eyebrow">Hobi 01</p>
+            <h3>Bulutangkis</h3>
+            <p class="personal-description">Bulutangkis menjadi olahraga pertama yang benar-benar saya tekuni.</p>
+          </article>
+          <article class="personal-card">
+            <video class="photo-placeholder hobby-media" controls autoplay muted loop playsinline preload="auto" aria-label="Video Josh bermain tennis">
+              <source src="Images%20%26%20Videos/Hobi2-browser.mp4" type="video/mp4">
+              Browser Anda tidak mendukung pemutaran video.
+            </video>
+            <p class="eyebrow">Hobi 02</p>
+            <h3>Tennis</h3>
+            <p class="personal-description">Sekarang saya bertekun dalam dunia tennis dan menjadi coach.</p>
+          </article>
+          <article class="personal-card">
+            <img class="photo-placeholder hobby-media" src="Images%20%26%20Videos/Hobi3.jpg" alt="Lapangan padel tempat Josh bermain bersama teman">
+            <p class="eyebrow">Hobi 03</p>
+            <h3>Padel</h3>
+            <p class="personal-description">Padel menjadi olahraga yang selalu saya mainkan bersama teman.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-<section id="work">
-  <div class="section-head">
-    <h2>Selected clips</h2>
-    <span class="type-label">04 pieces</span>
-  </div>
-  <div class="clips">
-    <div class="clip">
-      <span class="type-label">Feature — 4,200 words</span>
-      <h3>The Last Night Market on Jalan Sabang</h3>
-      <p>A dying block of street vendors, and what gets lost when a city redevelops its appetite.</p>
-      <a href="#">READ PIECE →</a>
+    <section class="personal-section section-border" id="akademik">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">03 — Perkuliahan</p>
+            <h2>Pengalaman kerja & Organisasi</h2>
+          </div>
+          <p class="heading-note">Pengalaman kerja dan kegiatan organisasi.</p>
+        </div>
+        <div class="achievement-carousel" role="region" tabindex="0" aria-label="Slideshow pengalaman kerja dan organisasi" aria-roledescription="carousel">
+          <div class="achievement-list">
+            <article class="achievement-card" role="group" aria-roledescription="slide" aria-label="1 dari 2">
+              <div class="photo-placeholder achievement-photo">
+                <img src="Images%20%26%20Videos/Foto%20Organisasi.jpeg" alt="Foto Josh bersama tim organisasi">
+              </div>
+              <div class="achievement-copy">
+                <p class="eyebrow">April 2025</p>
+                <h3>Ambassadors of UPH</h3>
+                <p class="personal-description">Bertanggung jawab mengurus perlengkapan logistik selama acara berlangsung</p>
+              </div>
+            </article>
+            <article class="achievement-card" role="group" aria-roledescription="slide" aria-label="2 dari 2" hidden>
+              <div class="photo-placeholder achievement-photo">
+                <img src="Images%20%26%20Videos/Magang1.jpeg" alt="Josh saat magang di Era Project">
+              </div>
+              <div class="achievement-copy">
+                <p class="eyebrow">April 2024</p>
+                <h3>Internship Era Project</h3>
+                <p class="personal-description">Mempelajari skill sales dalam dunia properti</p>
+              </div>
+            </article>
+          </div>
+          <div class="achievement-controls">
+            <button class="slide-button" type="button" data-slide-direction="-1" aria-label="Pengalaman kerja dan organisasi sebelumnya">←</button>
+            <div class="slide-indicators" role="group" aria-label="Pilih pengalaman kerja dan organisasi">
+              <button class="slide-indicator" type="button" data-slide-to="0" aria-label="Tampilkan pengalaman kerja dan organisasi 1" aria-pressed="true"></button>
+              <button class="slide-indicator" type="button" data-slide-to="1" aria-label="Tampilkan pengalaman kerja dan organisasi 2" aria-pressed="false"></button>
+            </div>
+            <span class="slide-count" aria-live="polite">01 / 02</span>
+            <button class="slide-button" type="button" data-slide-direction="1" aria-label="Pengalaman kerja dan organisasi berikutnya">→</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="personal-section section-border" id="prestasi">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">04 — Prestasi</p>
+            <h2>Prestasi non-akademik</h2>
+          </div>
+          <p class="heading-note">Pencapaian di bidang olahraga.</p>
+        </div>
+        <div class="achievement-carousel" role="region" tabindex="0" aria-label="Slideshow prestasi non-akademik" aria-roledescription="carousel">
+          <div class="achievement-list">
+            <article class="achievement-card" role="group" aria-roledescription="slide" aria-label="1 dari 4">
+              <div class="photo-placeholder achievement-photo achievement-portrait">
+                <img src="Images%20%26%20Videos/Prestasi1.PNG" alt="Foto prestasi juara pertama IRSW badminton men's double">
+              </div>
+              <div class="achievement-copy">
+                <p class="eyebrow">Juli 2025</p>
+                <h3>Juara 1 IRSW Badminton Men's Double</h3>
+              </div>
+            </article>
+            <article class="achievement-card" role="group" aria-roledescription="slide" aria-label="2 dari 4" hidden>
+              <div class="photo-placeholder achievement-photo achievement-landscape">
+                <img src="Images%20%26%20Videos/Sertifikat1.jpeg" alt="Sertifikat Narada Ultimate Cup 5.0 badminton men's doubles champion">
+              </div>
+              <div class="achievement-copy">
+                <p class="eyebrow">Oktober 2022</p>
+                <h3>Narada Ultimate Cup 5.0 - Badminton Mens Double Champion</h3>
+              </div>
+            </article>
+            <article class="achievement-card" role="group" aria-roledescription="slide" aria-label="3 dari 4" hidden>
+              <div class="photo-placeholder achievement-photo achievement-landscape">
+                <img src="Images%20%26%20Videos/Sertifikat2.jpeg" alt="Sertifikat Laurensia Cup 2023 badminton men's doubles champion">
+              </div>
+              <div class="achievement-copy">
+                <p class="eyebrow">Januari 2023</p>
+                <h3>Laurensia Cup 2023 - Badminton Mens Double Champion</h3>
+              </div>
+            </article>
+            <article class="achievement-card" role="group" aria-roledescription="slide" aria-label="4 dari 4" hidden>
+              <div class="photo-placeholder achievement-photo achievement-landscape">
+                <img src="Images%20%26%20Videos/Sertifikat3.jpeg" alt="Sertifikat JIC Eternal badminton men's doubles champion">
+              </div>
+              <div class="achievement-copy">
+                <p class="eyebrow">Agustus 2023</p>
+                <h3>JIC Eternal - Badminton Mens Double Champion</h3>
+              </div>
+            </article>
+          </div>
+          <div class="achievement-controls">
+            <button class="slide-button" type="button" data-slide-direction="-1" aria-label="Prestasi sebelumnya">←</button>
+            <div class="slide-indicators" role="group" aria-label="Pilih prestasi">
+              <button class="slide-indicator" type="button" data-slide-to="0" aria-label="Tampilkan prestasi 1" aria-pressed="true"></button>
+              <button class="slide-indicator" type="button" data-slide-to="1" aria-label="Tampilkan prestasi 2" aria-pressed="false"></button>
+              <button class="slide-indicator" type="button" data-slide-to="2" aria-label="Tampilkan prestasi 3" aria-pressed="false"></button>
+              <button class="slide-indicator" type="button" data-slide-to="3" aria-label="Tampilkan prestasi 4" aria-pressed="false"></button>
+            </div>
+            <span class="slide-count" aria-live="polite">01 / 04</span>
+            <button class="slide-button" type="button" data-slide-direction="1" aria-label="Prestasi berikutnya">→</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects section-border" id="proyek">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">05 — Proyek individu</p>
+            <h2>Yang saya buat sendiri</h2>
+          </div>
+          <p class="heading-note">Latihan dan eksperimen pribadi.</p>
+        </div>
+
+        <div class="project-list">
+          <article class="project-card">
+            <a class="project-preview preview-magic" href="Magicbox/index.html" target="_blank" rel="noopener noreferrer" aria-label="Buka proyek Magicbox di tab baru">
+              <span class="preview-caption">INTERAKSI / JAVASCRIPT</span>
+              <span class="magic-grid" aria-hidden="true">
+                <i></i><i></i><i></i><i></i>
+                <i></i><i></i><i></i><i></i>
+                <i></i><i></i><i></i><i></i>
+                <i></i><i></i><i></i><i></i>
+              </span>
+              <span class="preview-arrow" aria-hidden="true">↗</span>
+            </a>
+            <div class="project-info">
+              <div class="project-title">
+                <span class="project-number">01</span>
+                <h3>Magicbox</h3>
+              </div>
+              <p>Eksperimen grid interaktif: tombol mengubah susunan kotak menjadi satu gambar.</p>
+              <a class="project-link" href="Magicbox/index.html" target="_blank" rel="noopener noreferrer">Lihat proyek <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <a class="project-preview preview-mondrian" href="tugas-lab04.1/index.html" target="_blank" rel="noopener noreferrer" aria-label="Buka proyek Mondrian di tab baru">
+              <span class="preview-caption">LAYOUT / CSS GRID</span>
+              <span class="mondrian-art" aria-hidden="true">
+                <i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+              </span>
+              <span class="preview-arrow" aria-hidden="true">↗</span>
+            </a>
+            <div class="project-info">
+              <div class="project-title">
+                <span class="project-number">02</span>
+                <h3>Komposisi Mondrian</h3>
+              </div>
+              <p>Latihan menyusun warna dan bidang menggunakan CSS Grid, tanpa gambar tambahan.</p>
+              <a class="project-link" href="tugas-lab04.1/index.html" target="_blank" rel="noopener noreferrer">Lihat proyek <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <a class="project-preview preview-agency" href="tugas-lab04.2/index.html" target="_blank" rel="noopener noreferrer" aria-label="Buka proyek Agency di tab baru">
+              <span class="preview-caption">WEB DESIGN / HTML &amp; CSS</span>
+              <span class="agency-art" aria-hidden="true">
+                <span class="agency-heading">We are a<br>Creative Design<br>Agency</span>
+                <span class="agency-block agency-block-one"></span>
+                <span class="agency-block agency-block-two"></span>
+              </span>
+              <span class="preview-arrow" aria-hidden="true">↗</span>
+            </a>
+            <div class="project-info">
+              <div class="project-title">
+                <span class="project-number">03</span>
+                <h3>Agency landing page</h3>
+              </div>
+              <p>Halaman latihan untuk merapikan konten, gambar, dan layout dua kolom.</p>
+              <a class="project-link" href="tugas-lab04.2/index.html" target="_blank" rel="noopener noreferrer">Lihat proyek <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="team-projects section-border" id="proyek-tim">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">06 — Kolaborasi</p>
+            <h2>Proyek tim</h2>
+          </div>
+          <p class="heading-note">Ruang untuk proyek yang dikerjakan bersama.</p>
+        </div>
+        <div class="team-grid">
+          <article class="team-card">
+            <p class="eyebrow">Proyek tim 01</p>
+            <h3>ConvNeXt Architecture Exploration for Rice Leaf Disease Classification</h3>
+            <p class="personal-description">Eksplorasi arsitektur ConvNeXt untuk klasifikasi penyakit daun padi.</p>
+            <a class="photo-placeholder team-photo team-paper-link" href="https://1drv.ms/w/c/acfc82cd19243864/IQAZRuoZupt1SYKfSZJCyd2LARq8uRFBi_2eN7TMLslB1AU?e=b9LX2Z" target="_blank" rel="noopener noreferrer" aria-label="Buka paper ConvNeXt di tab baru">
+              <img src="Images%20%26%20Videos/Infografis%20Convnext.jpeg" alt="Infografis paper ConvNeXt tentang klasifikasi penyakit daun padi">
+            </a>
+            <p class="team-image-caption">Klik infografis untuk membuka paper.</p>
+          </article>
+          <article class="team-card">
+            <p class="eyebrow">Proyek tim 02</p>
+            <h3>NutriShare</h3>
+            <p class="personal-description">Aplikasi calorie tracker yang dikerjakan bersama. Saya berkontribusi pada bagian machine learning.</p>
+            <a class="photo-placeholder team-photo team-paper-link team-nutrishare-link" href="https://github.com/toraaxlv/NutriShare.git
+" target="_blank" rel="noopener noreferrer" aria-label="Buka GitHub NutriShare di tab baru">
+              <img src="Images%20%26%20Videos/Nutrishare%20logo.PNG" alt="Logo NutriShare">
+            </a>
+            <p class="team-image-caption">Klik logo untuk membuka proyek di GitHub.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="kontak">
+      <div class="container contact-inner">
+        <p class="eyebrow">07 — Kontak</p>
+        <h2>Punya ide atau ingin ngobrol?</h2>
+        <p>Saya terbuka untuk kenalan, masukan, atau kolaborasi kecil.</p>
+        <div class="contact-links">
+          <a class="button button-light" href="https://github.com/joshethanw" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+          <a class="button button-light" href="https://www.instagram.com/jjoshwidjaja/" target="_blank" rel="noopener noreferrer">Instagram <span aria-hidden="true">↗</span></a>
+          <a class="button button-light" href="https://www.linkedin.com/in/josh-ethan-widjaja/?isSelfProfile=true" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a class="wordmark" href="#home">portofolio<span>.</span></a>
+      <p>@jjoshwidjaja</p>
+      <a href="#home" class="back-top">Kembali ke atas ↑</a>
     </div>
-    <div class="clip">
-      <span class="type-label">Profile — 2,800 words</span>
-      <h3>The Woman Who Repairs Ships in Sunda Kelapa</h3>
-      <p>One of the harbor's last female caulkers, on tradition, labor, and being underestimated.</p>
-      <a href="#">READ PIECE →</a>
-    </div>
-    <div class="clip">
-      <span class="type-label">Essay — 1,600 words</span>
-      <h3>On Writing About Places You're Leaving</h3>
-      <p>A personal essay on documentation as a form of grief, and of holding on.</p>
-      <a href="#">READ PIECE →</a>
-    </div>
-    <div class="clip">
-      <span class="type-label">Investigation — 5,100 words</span>
-      <h3>Who Owns the Rain?</h3>
-      <p>A look into private weather-modification contracts and who actually benefits from them.</p>
-      <a href="#">READ PIECE →</a>
-    </div>
-  </div>
-</section>
-
-<section id="about">
-  <div class="section-head">
-    <h2>About</h2>
-  </div>
-  <div class="about">
-    <div class="type-label">Bio</div>
-    <p>I've spent the last several years writing about the quiet mechanics of everyday life — labor, migration, and the small negotiations people make with the places they live. My work has appeared in regional and international outlets, and I've reported from four countries. When I'm not on assignment, I'm usually reading something too long for the subway.</p>
-  </div>
-</section>
-
-<footer id="contact">
-  <span class="type-label">© 2026 J. Rivera</span>
-  <div>
-    <a class="type-label" href="mailto:hello@example.com">EMAIL</a>
-    <a class="type-label" href="#">TWITTER</a>
-    <a class="type-label" href="#">LINKEDIN</a>
-  </div>
-</footer>
-
+  </footer>
 </body>
 </html>

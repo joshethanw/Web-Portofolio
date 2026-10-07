@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  align-items: center;
+  background: #fafafa;
+  display: flex;
+  font-family: 'Poppins', sans-serif;
+  height: 100vh;
+  justify-content: center;
+  margin: 0;
+  overflow: hidden;
+}
+
+.magic {
+  background: #f9ca24;
+  border: 0;
+  border-radius: 3px;
+  box-shadow: 0 3px rgba(249, 202, 36, 0.5);
+  color: #fff;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 16px;
+  padding: 12px 20px;
+  position: fixed;
+  top: 20px;
+}
+
+.magic:focus {
+  outline: none;
+}
+
+.magic:active {
+  box-shadow: none;
+  transform: translateY(2px);
+}
+
+.boxes {
+  background-image: url('https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMXRoajV4dGh5OTI0cWtwY2tjN3EyaXVvdWw5c2RlY2V0MWR5cHZ6NSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/fgR5ghGSXWpuU/giphy.gif');
+  background-repeat: no-repeat;
+  background-size: 500px 500px;
+  display: flex;
+  flex-wrap: wrap;
+  height: 500px;
+  justify-content: space-around;
+  position: relative;
+  transition: 0.4s ease;
+  width: 500px;
+}
+
+.boxes.big {
+  background-image: none;
+  height: 600px;
+  width: 600px;
+}
+
+.boxes.big .box {
+  opacity: 1;
+  transform: rotateZ(360deg);
+}
+
+.boxes.big .box::before,
+.boxes.big .box::after {
+  opacity: 1;
+}
+
+.box {
+  background-image: url('https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMXRoajV4dGh5OTI0cWtwY2tjN3EyaXVvdWw5c2RlY2V0MWR5cHZ6NSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/fgR5ghGSXWpuU/giphy.gif');
+  background-repeat: no-repeat;
+  background-size: 500px 500px;
+  height: 125px;
+  opacity: 0;
+  position: relative;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  width: 125px;
+}
+
+.box::after {
+  background: #f6e58d;
+  content: '';
+  height: 100%;
+  position: absolute;
+  right: -15px;
+  top: 8px;
+  opacity: 0;
+  transform: skewY(45deg);
+  transition: opacity 0.4s ease;
+  width: 15px;
+}
+
+.box::before {
+  background: #f9ca24;
+  bottom: -15px;
+  content: '';
+  height: 15px;
+  left: 8px;
+  opacity: 0;
+  position: absolute;
+  transform: skewX(45deg);
+  transition: opacity 0.4s ease;
+  width: 100%;
+}
