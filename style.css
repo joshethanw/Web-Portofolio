@@ -476,11 +476,11 @@ h3 {
 }
 
 .achievement-portrait {
-  width: min(100%, 360px);
-  max-height: 520px;
-  aspect-ratio: 0.72;
+  width: min(100%, 294px);
+  aspect-ratio: 934 / 1650;
   justify-self: center;
-  background: #fff;
+  border: 0;
+  background: transparent;
 }
 
 .achievement-copy {
